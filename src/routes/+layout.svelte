@@ -5,6 +5,7 @@
 
 <div class="mx-auto max-w-[1424px]">
 	<Navbar />
-	<h1 class="">hello</h1>
-	<slot />
+	<div class="mx-auto max-w-[1024px] pt-10">
+		<slot />
+	</div>
 </div>

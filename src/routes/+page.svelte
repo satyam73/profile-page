@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
+	import ProfileHeader from '$lib/components/profile-header/profile-header.svelte';
 </script>
 
-<Button variant="outline">Click me</Button>
+<div>
+	<ProfileHeader />
+</div>
