@@ -33,14 +33,22 @@
 </script>
 
 <header class="flex items-center justify-between border-b border-dashed px-2 py-4">
-	<span class="logo flex items-center gap-1">
-		<img src="/logo.svg" class="w-10" alt="Duggup" />
-		<span class="text-3xl font-bold text-[#333333]"> Duggup </span>
-	</span>
+	<a href="/">
+		<span class="logo flex items-center gap-1">
+			<img src="/logo.svg" class="w-10" alt="Duggup" />
+			<span class="text-3xl font-bold text-[#333333]"> Duggup </span>
+		</span>	
+	</a>
 	<nav class="link flex items-center gap-7">
 		{#each NAVBAR_LINKS as item}
-		<!-- TODO: add bottom bar for navigation of these elements -->
-			<NavLink icon={item.icon} text={item.text} id={item.id} link={item.link} styles={'max-lg:hidden'} />
+			<!-- TODO: add bottom bar for navigation of these elements -->
+			<NavLink
+				icon={item.icon}
+				text={item.text}
+				id={item.id}
+				link={item.link}
+				styles={'max-lg:hidden'}
+			/>
 		{/each}
 		<!-- TODO: add bottom bar for navigation of this button -->
 		<Button
