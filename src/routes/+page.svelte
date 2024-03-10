@@ -1,11 +1,10 @@
 <script lang="ts">
-	import CardWithImage from '$lib/components/common/card-with-image/card-with-image.svelte';
+	import Timeline from '$lib/components/common/timeline/timeline.svelte';
 	import ProfileHeader from '$lib/components/profile-header/profile-header.svelte';
   
 </script>
 
-<div>
+<div class="flex gap-4 flex-col">
 	<ProfileHeader />
-
-  <CardWithImage image={'/steve-jobs-bg.svg'} text={'No amount of technology can convert a bad story into a good story.'}/>
+  <Timeline/>
 </div>
