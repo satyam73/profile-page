@@ -22,7 +22,7 @@
 	const WEBSITE_LINK = 'https://google.com';
 </script>
 
-<div class="flex gap-6  max-sm:flex-col px-4">
+<div class="flex gap-6  max-sm:flex-col px-4 w-[90%] max-sm:w-fit">
 	<div class="profile flex max-sm:flex-row flex-col items-center">
 		<img src="/user-image.svg" alt="" class="w-[120px] rounded-full border" />
 		<span class="w-24 text-center text-2xl font-bold"> Krishna Kiran </span>

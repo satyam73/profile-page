@@ -91,7 +91,7 @@
 	});
 </script>
 
-<div class={`relative mx-auto h-[${TIMELINE_HEIGHT}px] w-11/12 border-s-4 border-dotted ps-5`}>
+<div class={`relative mx-auto h-[${TIMELINE_HEIGHT}px] w-[85%] border-s-4 border-dotted ps-5`}>
 	{#each TIMELINE_STORIES as item}
 		{#if item.isJobTimeline}
 			<div class="relative h-[157px]">
