@@ -2,7 +2,7 @@
 	import CardWithImage from '../card-with-image/card-with-image.svelte';
 	import Circle from './circle.svelte';
 	import JobInfo from './job-info.svelte';
-
+	// TODO: Lookout for types in each loop issue
 	// type Post = {
 	// 	image: string;
 	// 	title: string;
@@ -80,7 +80,7 @@
 			posts: null
 		}
 	];
-	
+
 	let TIMELINE_HEIGHT: number = 100;
 	TIMELINE_STORIES.forEach((story) => {
 		if (story.isJobTimeline) {
