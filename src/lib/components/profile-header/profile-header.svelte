@@ -22,12 +22,12 @@
 	const WEBSITE_LINK = 'https://google.com';
 </script>
 
-<div class="flex gap-6">
-	<div class="profile flex flex-col items-center">
+<div class="flex gap-6  max-sm:flex-col px-4">
+	<div class="profile flex max-sm:flex-row flex-col items-center">
 		<img src="/user-image.svg" alt="" class="w-[120px] rounded-full border" />
 		<span class="w-24 text-center text-2xl font-bold"> Krishna Kiran </span>
 	</div>
-	<div class="flex flex-1 flex-col justify-around">
+	<div class="flex flex-1 flex-col justify-around max-sm:gap-3">
 		<p class="bio text=[#141618] text-sm font-normal">
 			{BIO}
 		</p>
@@ -39,8 +39,8 @@
 			{isFollowed ? 'Followed' : 'Follow'}
 		</Button>
 	</div>
-	<div class="flex flex-col items-end justify-around">
-		<div class="flex flex-col items-end justify-between">
+	<div class="flex flex-col items-end justify-around  max-sm:flex-row max-sm:justify-between">
+		<div class="flex flex-col items-end justify-between max-sm:items-start ">
 			<img class="h-9 w-9" src="/logo.svg" alt="" />
 			<span class="text-base font-bold">{COMPANY_NAME}</span>
 			<span class="text=[#7A9299] text-xs font-normal">{POSITION}</span>
@@ -50,7 +50,6 @@
 				My website
 				<img src="/icons/links-external.svg" alt="" class="mr-1" />
 			</a>
-
 			<Button variant="outline" size="icon" class="border-0 hover:bg-transparent">
 				<img src="/icons/shortcut.svg" alt="" />
 			</Button>
