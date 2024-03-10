@@ -1,6 +1,21 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
+	import { writable } from 'svelte/store';
+	const followState = writable(false);
+	let isFollowed: boolean = false;
 
+	followState.subscribe((value) => {
+		isFollowed = value;
+	});
+
+	function toggleFollow() {
+		if(isFollowed){
+			followState.set(false)
+		}else{
+			followState.set(true)
+		}
+	}
+	
 	const BIO = `Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write hot-takes on building a business, shipping delightful products and accelerating product and career growth.`;
 	const COMPANY_NAME = 'Duggup';
 	const POSITION = 'Co-Founder and CEO';
@@ -17,10 +32,11 @@
 			{BIO}
 		</p>
 		<Button
+			on:click={toggleFollow}
 			variant="outline"
 			class="w-[107px] border border-b-4 border-[#4D4D4D] text-sm font-normal text-[#4D4D4D]"
 		>
-			Follow
+			{isFollowed ? 'Followed' : 'Follow'}
 		</Button>
 	</div>
 	<div class="flex flex-col items-end justify-around">
