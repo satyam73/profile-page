@@ -39,11 +39,13 @@
 	</span>
 	<nav class="link flex items-center gap-7">
 		{#each NAVBAR_LINKS as item}
-			<NavLink icon={item.icon} text={item.text} id={item.id} link={item.link} />
+		<!-- TODO: add bottom bar for navigation of these elements -->
+			<NavLink icon={item.icon} text={item.text} id={item.id} link={item.link} styles={'max-lg:hidden'} />
 		{/each}
+		<!-- TODO: add bottom bar for navigation of this button -->
 		<Button
 			variant="outline"
-			class="ml-2 border border-b-4 border-[#4D4D4D] text-sm font-normal text-[#4D4D4D]"
+			class="ml-2 border border-b-4 border-[#4D4D4D] text-sm font-normal text-[#4D4D4D] max-lg:hidden"
 		>
 			<img src="/icons/plus-square.svg" class="mr-2 h-4 w-4" alt="plus square" />
 			Post
