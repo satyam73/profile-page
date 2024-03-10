@@ -81,8 +81,13 @@
 		}
 	];
 
-	let TIMELINE_HEIGHT: number = 100;
+	let TIMELINE_HEIGHT: number = 40;
 	TIMELINE_STORIES.forEach((story) => {
+		/**
+		 * Height of component with job change details = 157px
+		 * Height of component with job change details = 288px
+		 * Adding all the components height to line height which will be showed in timeline "line"
+		*/
 		if (story.isJobTimeline) {
 			TIMELINE_HEIGHT += 157;
 		} else {
