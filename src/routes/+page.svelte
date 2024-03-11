@@ -9,6 +9,6 @@
 		color
 	</div> -->
 	<!-- <div class="w-full overflow-auto "> -->
-		<Timeline />
+	<Timeline />
 	<!-- </div> -->
 </div>

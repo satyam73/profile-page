@@ -28,7 +28,7 @@
 		<span class="w-24 text-center text-2xl font-bold"> Krishna Kiran </span>
 	</div>
 	<div class="flex flex-1 flex-col justify-around max-sm:gap-3">
-		<p class="bio text=[#141618] text-sm font-normal line-clamp-4">
+		<p class="bio text=[#141618] line-clamp-4 text-sm font-normal">
 			{BIO}
 		</p>
 		<Button

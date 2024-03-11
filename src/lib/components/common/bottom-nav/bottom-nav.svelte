@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	const NAVBAR_LINKS = [
 		{
 			id: 'home',
