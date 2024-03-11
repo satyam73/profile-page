@@ -1,3 +1,31 @@
+# Pre-requisite
+
+- Yarn
+- Node
+
+# Setup Project Locally
+
+Clone the repository with command,
+```
+git clone https://github.com/satyam73/profile-page.git
+```
+Checkout to directory(if not in the project directory) with command,
+```
+cd profile-page
+```
+Install dependencies with command,
+```
+yarn install
+```
+Run the project with command,
+```
+yarn dev
+```
+If everything is well and good, the development server will run at, 
+```
+http://localhost:5173/
+```
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
