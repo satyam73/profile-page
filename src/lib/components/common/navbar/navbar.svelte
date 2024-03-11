@@ -37,7 +37,7 @@
 		<span class="logo flex items-center gap-1">
 			<img src="/logo.svg" class="w-10" alt="Duggup" />
 			<span class="text-3xl font-bold text-[#333333]"> Duggup </span>
-		</span>	
+		</span>
 	</a>
 	<nav class="link flex items-center gap-7">
 		{#each NAVBAR_LINKS as item}

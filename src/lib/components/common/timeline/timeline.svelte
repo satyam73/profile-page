@@ -87,7 +87,7 @@
 		 * Height of component with job change details = 157px
 		 * Height of component with job change details = 288px
 		 * Adding all the components height to line height which will be showed in timeline "line"
-		*/
+		 */
 		if (story.isJobTimeline) {
 			TIMELINE_HEIGHT += 157;
 		} else {
@@ -102,7 +102,12 @@
 			<div class="relative h-[157px]">
 				<Circle isBigCircle={true} styles={`absolute left-[-36px] top-[70px]`} />
 				<div class={`absolute left-[-210px] top-[35px]`}>
-				<JobInfo companyName={item.companyDetails?.name} logo={item.companyDetails?.logo} timing={item.companyDetails?.timing} location={item.companyDetails?.location}/>
+					<JobInfo
+						companyName={item.companyDetails?.name}
+						logo={item.companyDetails?.logo}
+						timing={item.companyDetails?.timing}
+						location={item.companyDetails?.location}
+					/>
 				</div>
 				<div class="flex h-full flex-col justify-center ps-3">
 					<h3 class="text-xl font-bold text-[#141618]">{item.companyDetails?.position}</h3>
@@ -112,7 +117,9 @@
 		{:else}
 			<div class="relative h-[288px]">
 				<Circle isBigCircle={false} styles="absolute left-[-30px] top-[144px]" />
-				<span class={`absolute left-[-110px] top-[140px] text-[#7A9299] text-base font-normal`}>{item.time}</span>
+				<span class={`absolute left-[-110px] top-[140px] text-base font-normal text-[#7A9299]`}
+					>{item.time}</span
+				>
 				<div class="flex h-full items-center justify-start gap-6 ps-3">
 					{#each item.posts as post}
 						<CardWithImage image={post.image} text={post.title} />

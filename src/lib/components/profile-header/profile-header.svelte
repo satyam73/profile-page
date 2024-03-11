@@ -9,21 +9,21 @@
 	});
 
 	function toggleFollow() {
-		if(isFollowed){
-			followState.set(false)
-		}else{
-			followState.set(true)
+		if (isFollowed) {
+			followState.set(false);
+		} else {
+			followState.set(true);
 		}
 	}
-	
+
 	const BIO = `Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write hot-takes on building a business, shipping delightful products and accelerating product and career growth.`;
 	const COMPANY_NAME = 'Duggup';
 	const POSITION = 'Co-Founder and CEO';
 	const WEBSITE_LINK = 'https://google.com';
 </script>
 
-<div class="flex gap-6  max-sm:flex-col px-4 w-[90%] max-sm:w-fit">
-	<div class="profile flex max-sm:flex-row flex-col items-center">
+<div class="flex w-[90%] gap-6 px-4 max-sm:w-fit max-sm:flex-col">
+	<div class="profile flex flex-col items-center max-sm:flex-row">
 		<img src="/user-image.svg" alt="" class="w-[120px] rounded-full border" />
 		<span class="w-24 text-center text-2xl font-bold"> Krishna Kiran </span>
 	</div>
@@ -39,8 +39,8 @@
 			{isFollowed ? 'Followed' : 'Follow'}
 		</Button>
 	</div>
-	<div class="flex flex-col items-end justify-around  max-sm:flex-row max-sm:justify-between">
-		<div class="flex flex-col items-end justify-between max-sm:items-start ">
+	<div class="flex flex-col items-end justify-around max-sm:flex-row max-sm:justify-between">
+		<div class="flex flex-col items-end justify-between max-sm:items-start">
 			<img class="h-9 w-9" src="/logo.svg" alt="" />
 			<span class="text-base font-bold">{COMPANY_NAME}</span>
 			<span class="text=[#7A9299] text-xs font-normal">{POSITION}</span>
