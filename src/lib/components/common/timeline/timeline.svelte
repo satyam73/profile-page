@@ -143,7 +143,7 @@
 			</div>
 		{:else}
 			<div
-				class={`relative h-[288px] border-black max-xl:flex max-xl:h-[${176 * item.posts.length + 36}px] max-xl:flex-col max-xl:gap-3`}
+				class={`relative xl:h-[288px] border-black max-xl:flex max-xl:h-[${(176 * item.posts.length) + 36}px] max-xl:flex-col max-xl:gap-3`}
 			>
 				<Circle isBigCircle={false} styles="absolute left-[-30px] top-[144px]" />
 				<span
