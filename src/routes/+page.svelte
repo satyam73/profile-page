@@ -6,7 +6,7 @@
 <svelte:head>
 	<title>Duggup | Profile</title>
 </svelte:head>
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 max-xl:gap-10">
 	<ProfileHeader />
 	<Timeline />
 </div>
