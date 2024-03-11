@@ -7,8 +7,8 @@
 
 <div class="mx-auto max-w-[1424px]">
 	<Navbar />
-	<div class="mx-auto max-w-[1024px] pt-10 mb-20">
+	<div class="mx-auto mb-20 max-w-[1024px] pt-10">
 		<slot />
 	</div>
 </div>
-<!-- <BottomNav/> -->
+<BottomNav />
