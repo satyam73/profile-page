@@ -5,5 +5,10 @@
 
 <div class="flex flex-col gap-4">
 	<ProfileHeader />
-	<Timeline />
+	<!-- <div class="h-[100vh] bg-slate-400" >
+		color
+	</div> -->
+	<!-- <div class="w-full overflow-auto "> -->
+		<Timeline />
+	<!-- </div> -->
 </div>
