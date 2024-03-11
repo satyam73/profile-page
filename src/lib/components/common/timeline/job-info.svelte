@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 
-	export let companyName: string = '';
-	export let location: string = '';
-	export let placeholder: string = 'Joined';
-	export let timing: string = '';
-	export let logo: string = '/logo.svg';
+	export let companyName: string | null = '';
+	export let location: string | null = '';
+	export let placeholder: string | null = 'Joined';
+	export let timing: string | null = '';
+	export let logo: string | null = '/logo.svg';
 	export let styles: string = '';
 
 	const fontClass = 'font-normal text-base text-[#7A9299] leading-[130%]';

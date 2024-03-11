@@ -3,32 +3,37 @@
 	import Circle from './circle.svelte';
 	import JobInfo from './job-info.svelte';
 
-	// TODO: Lookout for types in each loop issue
-	// type Post = {
-	// 	image: string;
-	// 	title: string;
-	// };
+	type Post = {
+		image: string | null;
+		title: string | null;
+	};
 
-	// type CompanyDetail = {
-	// 	logo: string;
-	// 	name: string;
-	// 	location: string;
-	// 	position: string;
-	// 	timing: string;
-	// };
+	type CompanyDetail = {
+		logo: string | null;
+		name: string | null;
+		location: string | null;
+		position: string | null;
+		timing: string | null;
+	};
 
-	// type Timeline = {
-	// 	time: string;
-	// 	isJobTimeline: boolean;
-	// 	companyDetails: CompanyDetail[] | null;
-	// 	posts?: Post[] | null;
-	// };
+	type Timeline = {
+		time: string;
+		isJobTimeline: boolean;
+		companyDetails: CompanyDetail;
+		posts: Post[];
+	};
 
-	const TIMELINE_STORIES = [
+	const TIMELINE_STORIES: Timeline[] = [
 		{
 			time: 'Dec 2023',
 			isJobTimeline: false,
-			companyDetails: null,
+			companyDetails: {
+				logo: null,
+				name: null,
+				location: null,
+				position: null,
+				timing: null
+			},
 			posts: [
 				{
 					image: '/steve-jobs-bg.svg',
@@ -51,12 +56,23 @@
 				position: 'Co-Founder and CEO',
 				timing: 'Full-time · Remote'
 			},
-			posts: null
+			posts: [
+				{
+					image: null,
+					title: null
+				}
+			]
 		},
 		{
 			time: 'Dec 2023',
 			isJobTimeline: false,
-			companyDetails: null,
+			companyDetails: {
+				logo: null,
+				name: null,
+				location: null,
+				position: null,
+				timing: null
+			},
 			posts: [
 				{
 					image: '/pc-bg.svg',
@@ -78,7 +94,12 @@
 				position: 'VP Engineering',
 				timing: 'Full-time'
 			},
-			posts: null
+			posts: [
+				{
+					image: null,
+					title: null
+				}
+			]
 		}
 	];
 
@@ -103,7 +124,7 @@
 	total height = 253px
 	*/
 
-	TIMELINE_STORIES.forEach((story) => {
+	TIMELINE_STORIES.forEach((story: Timeline) => {
 		/**
 		 * Height of component with job change details = 157px
 		 * Height of component with job change details = 288px
@@ -142,7 +163,7 @@
 			</div>
 		{:else}
 			<div
-				class={`relative border-black max-xl:flex xl:h-[288px] max-xl:h-[${176 * item.posts.length + 36}px] max-xl:flex-col max-xl:gap-3`}
+				class={`relative border-black max-xl:flex xl:h-[288px] max-xl:h-[${176 * item?.posts.length + 36}px] max-xl:flex-col max-xl:gap-3`}
 			>
 				<Circle isBigCircle={false} styles="absolute left-[-30px] top-[144px]" />
 				<span
@@ -152,8 +173,8 @@
 				<div
 					class="flex h-full items-center justify-start gap-6 ps-3 max-xl:flex-col max-xl:items-start"
 				>
-					{#each item.posts as post}
-						<CardWithImage image={post.image} text={post.title} />
+					{#each item?.posts as post}
+						<CardWithImage image={post?.image} text={post?.title} />
 					{/each}
 				</div>
 			</div>

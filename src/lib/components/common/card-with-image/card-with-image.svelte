@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let image: string;
-	export let text: string;
+	export let image: string | null = '';
+	export let text: string | null = '';
 	export let link: string = 'https://google.com';
 </script>
 
