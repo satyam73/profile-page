@@ -117,7 +117,7 @@
 	total height = 388px (for 2 posts)
 	*/
 
-	/* mobile height of job component which is under item.isJobTimeline 
+	/* mobile height of job component which is under item.isJobTimeline if condition
 	HEIGHT = 253px
 	initial height = 157px
 	height of JobInfo component = 96px
@@ -146,6 +146,11 @@
 			<div
 				class="relative h-[157px] max-xl:flex max-xl:h-[253px] max-xl:flex-col max-xl:justify-center max-xl:gap-3"
 			>
+				<img
+					src="/icons/chevron-up-low-opacity.svg"
+					alt=""
+					class="absolute left-[-28px] top-0 w-[13px]"
+				/>
 				<Circle isBigCircle={true} styles={`absolute left-[-36px] top-[70px]`} />
 				<div class={`absolute left-[-210px] top-[35px] max-xl:static max-xl:ps-3`}>
 					<JobInfo
