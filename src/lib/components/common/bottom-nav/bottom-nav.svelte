@@ -1,5 +1,11 @@
 <script lang="ts">
-	const NAVBAR_LINKS = [
+	type BottomNavLink = {
+		id: string;
+		text: string;
+		link: string;
+		icon: string;
+	};
+	const BOTTOM_NAV_LINK: BottomNavLink[] = [
 		{
 			id: 'home',
 			text: 'Home',
@@ -31,7 +37,7 @@
 	class="fixed bottom-0 left-0 right-0 z-10 h-16 w-full border-t-2 bg-white shadow-2xl lg:hidden"
 >
 	<nav class="flex items-center justify-evenly">
-		{#each NAVBAR_LINKS as link}
+		{#each BOTTOM_NAV_LINK as link}
 			<a href={link.link}>
 				<div class="flex flex-1 flex-col items-center justify-end p-0">
 					{#if link.id === 'post'}

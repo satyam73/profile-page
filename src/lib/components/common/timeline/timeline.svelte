@@ -1,6 +1,5 @@
 <script lang="ts">
 	import CardWithImage from '../card-with-image/card-with-image.svelte';
-	import { browser } from '$app/environment';
 	import Circle from './circle.svelte';
 	import JobInfo from './job-info.svelte';
 
@@ -94,7 +93,7 @@
 	height of CardWithImage component = 176px * number of posts
 	gap-3 = 12px
 	gap-6 = 24px
-	total height = 388px
+	total height = 388px (for 2 posts)
 	*/
 
 	/* mobile height of job component which is under item.isJobTimeline 
@@ -143,7 +142,7 @@
 			</div>
 		{:else}
 			<div
-				class={`relative xl:h-[288px] border-black max-xl:flex max-xl:h-[${(176 * item.posts.length) + 36}px] max-xl:flex-col max-xl:gap-3`}
+				class={`relative border-black max-xl:flex xl:h-[288px] max-xl:h-[${176 * item.posts.length + 36}px] max-xl:flex-col max-xl:gap-3`}
 			>
 				<Circle isBigCircle={false} styles="absolute left-[-30px] top-[144px]" />
 				<span
